@@ -1,3 +1,3 @@
-class Group
-  attr_accessor :title, :creation_year, :creation_place, :website
-end
+require_relative 'base'
+
+class Group < Base; end

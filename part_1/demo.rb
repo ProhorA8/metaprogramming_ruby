@@ -20,5 +20,4 @@ Oj.load(album_data).each do |method, value|
   album.instance_variable_set :"@#{method}", value
 end
 
-puts album.inspect #=> #<Album:0x00007fc3ca912090 @title="Ride the Lightning",
-# @group="Metallica", @year=1984, @label="Megaforce Records", @length="00:47:25", @tracks_count=10>
+puts album.inspect
