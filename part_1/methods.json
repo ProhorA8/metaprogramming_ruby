@@ -11,6 +11,7 @@
     "title",
     "creation_year",
     "creation_place",
-    "website"
+    "website",
+    "leader"
   ]
 }

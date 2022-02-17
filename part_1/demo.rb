@@ -1,23 +1,13 @@
-require 'oj'
-require_relative 'album'
-require_relative 'group'
+require_relative 'main'
 
-album_data = File.read('./data/album.json')
-group_data = File.read('./data/group.json')
-
-album = Album.new
-
-# первый подход
-# обходим хэш
-# Oj.load(album_data).each do |method, value|
-#   # выполняем присваивание методу
-#   album.send "#{method}=", value
-# end
-
-# второй подход
-Oj.load(album_data).each do |method, value|
-  # заполняем значения переменных образца класса
-  album.instance_variable_set :"@#{method}", value
-end
+album = Album.new('album')
+group = Group.new('group')
 
 puts album.inspect
+puts group.inspect
+
+puts '=' * 40
+
+puts album.title
+puts group.title
+puts group.leader
